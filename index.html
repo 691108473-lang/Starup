@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MarketHub — Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#"><span class="brand-mark">M</span><span>MarketHub</span></a>
+    <nav>
+      <a href="#products">สินค้า</a>
+      <a href="#categories">หมวดหมู่</a>
+      <a href="#about">เกี่ยวกับเรา</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="cartBtn" aria-label="ตะกร้า">🛒 <span id="cartCount">0</span></button>
+      <button class="btn btn-outline" id="loginBtn">เข้าสู่ระบบ</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">MARKETPLACE FOR EVERYONE</span>
+        <h1>ช้อปง่าย<br><span>ขายได้จริง</span></h1>
+        <p>ตลาดซื้อขายสินค้าที่ออกแบบให้ผู้ซื้อค้นหาได้ง่าย และผู้ขายจัดการสินค้าได้เป็นระบบ</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#products">เริ่มช้อป</a>
+          <button class="btn btn-soft" id="googleBtn">เข้าสู่ระบบด้วย Google</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="orb"></div>
+        <div class="floating-card fc-one">⚡ สินค้าใหม่ทุกวัน</div>
+        <div class="floating-card fc-two">🔒 ระบบปลอดภัย</div>
+        <div class="floating-card fc-three">🚚 ติดตามออเดอร์</div>
+      </div>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="section-head"><div><span class="eyebrow">DISCOVER</span><h2>เลือกดูตามหมวดหมู่</h2></div></div>
+      <div class="chips" id="categoryChips">
+        <button class="chip active" data-category="">ทั้งหมด</button>
+        <button class="chip" data-category="อิเล็กทรอนิกส์">อิเล็กทรอนิกส์</button>
+        <button class="chip" data-category="แฟชั่น">แฟชั่น</button>
+        <button class="chip" data-category="บ้านและไลฟ์สไตล์">บ้านและไลฟ์สไตล์</button>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="section-head">
+        <div><span class="eyebrow">PRODUCTS</span><h2>สินค้าน่าสนใจ</h2></div>
+        <div class="search-box"><input id="searchInput" placeholder="ค้นหาสินค้า..."><button id="searchBtn">ค้นหา</button></div>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <div class="empty">กำลังโหลดสินค้า...</div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div><span class="eyebrow">WHY MARKETPLACE</span><h2>ครบตั้งแต่ค้นหา<br>จนถึงติดตามออเดอร์</h2></div>
+      <div class="feature-list">
+        <div><b>01</b><h3>ค้นหาเร็ว</h3><p>ค้นหาและกรองสินค้าได้ง่าย</p></div>
+        <div><b>02</b><h3>บัญชีเดียว</h3><p>รองรับอีเมลและ Google Sign-In</p></div>
+        <div><b>03</b><h3>จัดการเป็นระบบ</h3><p>ผู้ขายและแอดมินมีเครื่องมือจัดการข้อมูล</p></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="loginModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal">×</button>
+      <span class="eyebrow">ACCOUNT</span>
+      <h2>เข้าสู่ระบบ</h2>
+      <form id="loginForm">
+        <label>อีเมล<input type="email" id="email" required></label>
+        <label>รหัสผ่าน<input type="password" id="password" required></label>
+        <button class="btn btn-primary full">เข้าสู่ระบบ</button>
+      </form>
+      <button class="btn btn-google full" id="modalGoogle">G &nbsp; เข้าสู่ระบบด้วย Google</button>
+      <p id="loginMessage" class="message"></p>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
